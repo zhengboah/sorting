@@ -1,9 +1,14 @@
+/**
+ * Bubble sort
+ *  1. Compare each pair of adjacent elements from the beginning of an array and if they are in reversed order, swap them.
+ *  2. If at least on swap has been done, repeat step 1. 
+ * Complexity: O(n^2)
+ */
+
 let arr = [ 1, 2, 5, 8, 9, 10, 11, 12, 13 ]
 
 let swapCount = 0
 let count = 0
-
-
 
 function bubble_sort (arr) {
   let length = arr.length
@@ -19,9 +24,6 @@ function bubble_sort (arr) {
     }
   }
 }
-
-
-
 
 function bubble_sort_optimize (arr) {
   let length = arr.length
