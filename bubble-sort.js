@@ -5,15 +5,15 @@
  * Complexity: O(n^2)
  */
 
-let arr = [ 1, 2, 5, 8, 9, 10, 11, 12, 13 ]
+let arr = [ 1, 12, 15, 8, 9, 10, 11, 12, 13 ]
 
 let swapCount = 0
 let count = 0
 
 function bubble_sort (arr) {
   let length = arr.length
-  for (let i = 0; i < length; i++) {
-    for (let j = 0; j < length - i; j++) {
+  for (let i = 0; i < length - 1; i++) {
+    for (let j = 0; j < length - i - 1; j++) {
       count++
       if (arr[j] > arr[j+1]) {
         swapCount++
@@ -27,9 +27,9 @@ function bubble_sort (arr) {
 
 function bubble_sort_optimize (arr) {
   let length = arr.length
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length - 1; i++) {
     let flag = true
-    for (let j = 0; j < length - i; j++) {
+    for (let j = 0; j < length - i - 1; j++) {
       count++
       if (arr[j] > arr[j+1]) {
         flag = false
@@ -47,6 +47,6 @@ function bubble_sort_optimize (arr) {
 }
 
 
-// bubble_sort(arr)
-bubble_sort_optimize(arr)
+bubble_sort(arr)
+// bubble_sort_optimize(arr)
 console.log(arr, count, swapCount)
